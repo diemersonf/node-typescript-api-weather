@@ -1,0 +1,32 @@
+{
+  "name": "typescript-api-weather",
+  "version": "1.0.0",
+  "description": "Typescript node.js API ",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lintfix": "eslint ./src ./test --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.pessoal:diemersonf/node-typescript-api-weather.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "api"
+  ],
+  "author": "Diemerson Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.2"
+  }
+}
