@@ -6,9 +6,11 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/src/index.js",
+    "start:dev": "ts-node-dev 'src/index.ts'",
     "lint": "eslint ./src ./test --ext .ts",
-    "lintfix": "eslint ./src ./test --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --runInBand"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,16 @@
   "author": "Diemerson Oliveira",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^16.9.0",
+    "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.32.0",
+    "jest": "^27.1.1",
+    "supertest": "^6.1.6",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   }
 }
